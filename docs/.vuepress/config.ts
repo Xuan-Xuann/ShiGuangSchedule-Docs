@@ -6,7 +6,7 @@ export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
   title: '拾光课程表',
-  description: '拾光课程表文档站',
+  description: '拾光课程表文档站 | 大学课程表 | 安卓应用 | 开源免费',
 
   head: [
     // 配置站点图标
