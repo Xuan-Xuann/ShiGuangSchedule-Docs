@@ -6,6 +6,7 @@ const SOURCE_URL = "https://raw.githubusercontent.com/XingHeYuZhuan/shiguang_war
 const TARGET_FILE = path.join(__dirname, '..', 'docs', 'guide', 'user', 'adapted-school.md');
 const REPO_BASE_URL = "https://github.com/XingHeYuZhuan/shiguang_warehouse";
 const REPO_SRC_URL = `${REPO_BASE_URL}/tree/main`;
+const TIMESTAMP_PLACEHOLDER = '__TIMESTAMP__';
 
 function parseYaml(yamlStr) {
     return yamlStr
@@ -33,6 +34,16 @@ function extractValue(block, key) {
     const regex = new RegExp(`${key}:\\s*["']?([^"'\n#]+)["']?`);
     const match = block.match(regex);
     return match ? match[1].trim() : null;
+}
+
+function normalizeMarkdownForCompare(markdown) {
+    return markdown
+        .replace(/\r\n/g, '\n')
+        .replace(/^createTime:\s*.*$/m, `createTime: ${TIMESTAMP_PLACEHOLDER}`)
+        .replace(
+            /^> 本页面由脚本自动同步，最后更新于：`.*`$/m,
+            `> 本页面由脚本自动同步，最后更新于：\`${TIMESTAMP_PLACEHOLDER}\``
+        );
 }
 
 function fetchAndGenerate() {
@@ -96,6 +107,14 @@ function fetchAndGenerate() {
                 const link = s.folder ? `[${s.name}](${REPO_SRC_URL}/${s.folder})` : s.name;
                 md += `- ${link}\n`;
             });
+
+            if (fs.existsSync(TARGET_FILE)) {
+                const existingMd = fs.readFileSync(TARGET_FILE, 'utf-8');
+                if (normalizeMarkdownForCompare(existingMd) === normalizeMarkdownForCompare(md)) {
+                    console.log('✏️  学校列表无变化，不写入文件。');
+                    return;
+                }
+            }
 
             // 确保目录存在后再写入。
             fs.mkdirSync(path.dirname(TARGET_FILE), { recursive: true });
