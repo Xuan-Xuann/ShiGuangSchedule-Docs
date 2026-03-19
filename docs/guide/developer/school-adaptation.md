@@ -16,11 +16,23 @@ createTime: 2026/03/04 20:23:00
 
 2. **Beta**阶段
 
-   - [Fork](https://github.com/XingHeYuZhuan/shiguang_warehouse/fork)
-   适配代码仓库并建立自己的分支，建议在 `resources/GLOBAL_TOOLS/test.js`
-   里放置适配测试代码，应用定义这个位置作为适配占位符
+   - [Fork](https://github.com/XingHeYuZhuan/shiguang_warehouse/fork) 适配代码仓库并建立自己的分支，建议在 `resources/GLOBAL_TOOLS/test.js` 里放置适配测试代码，应用定义这个位置作为适配占位符
    - 更新仓库结构后需要运行 GitHub 工作流来编译索引，应用只接收编译过的索引文件
    - 在应用**我的-更多-更新教务适配仓库**中选择**自定义仓库/私有仓库**，填写后点击**更新**等待完成，然后回到**教务系统导入**进行测试
+     :::: tip
+     **建议通过 ADB 调试连接 Android 设备来测试：**
+     ::: steps
+     1. 在 Android 设备上打开`开发者选项`并启用 `USB 调试`/`无线调试`，然后连接设备
+
+     2. 在电脑上访问：
+        - Chrome: `chrome://inspect#devices`
+        - Edge: `edge://inspect/#devices`
+        ![](/images/devices-connected.png)
+    
+     3. 在应用内启用 DevTools 网页调试
+        <img src="/images/DevTools.png" style="width: 50%; display: block; margin: 20px auto;">
+     :::
+     ::::
    - 修改适配代码后需要再次**更新教务适配仓库**
    - 完成 Beta 阶段适配验证，将适配脚本放在指定位置并在索引文件添加，确认没有问题后提交 [Pull Request](https://github.com/XingHeYuZhuan/shiguang_warehouse/pulls) 到适配代码仓库等待合并
 

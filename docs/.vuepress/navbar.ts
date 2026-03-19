@@ -23,7 +23,6 @@ export default defineNavbarConfig([
         icon: 'mdi:code',
         items: [
           { text: '应用开发', icon: 'mdi:android', link: '/guide/developer/app-dev' },
-          { text: '小部件开发', icon: 'mdi:widgets-outline', link: '/guide/developer/widget-dev' },
           { text: '学校教务系统适配', icon: 'mdi:school-outline', link: '/guide/developer/school-adaptation' }
         ]
       }

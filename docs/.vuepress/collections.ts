@@ -27,7 +27,6 @@ const Guide = defineCollection({
       prefix: 'developer',
       items: [
         { text: '应用开发', icon: 'mdi:android', link: 'app-dev' },
-        { text: '小部件开发', icon: 'mdi:widgets-outline', link: 'widget-dev' },
         { text: '学校教务系统适配', icon: 'mdi:school-outline', link: 'school-adaptation' }
       ]
     }
