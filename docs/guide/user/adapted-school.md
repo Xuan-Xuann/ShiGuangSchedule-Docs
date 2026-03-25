@@ -1,11 +1,11 @@
 ---
 title: 已适配学校
-createTime: 2026/03/23 10:04:07
+createTime: 2026/03/25 10:01:51
 ---
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/03/23 10:04:07`
+> 本页面由脚本自动同步，最后更新于：`2026/03/25 10:01:51`
 
 ## 🛠️ 通用工具与教务
 
@@ -68,6 +68,7 @@ createTime: 2026/03/23 10:04:07
 ### M
 - [茂名职业技术学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/MMPT)
 ### N
+- [南京林业大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/NJFU)
 - [南京师范大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/NJNU)
 - [内蒙古工业大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/IMUT)
 ### S
