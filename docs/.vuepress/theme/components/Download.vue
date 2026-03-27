@@ -8,7 +8,7 @@ interface DeviceType {
   patterns: string[]
 }
 
-type DownloadSourceId = 'gitee.com' | 'github.com' | 'gh-proxy.net' | 'gh-proxy.top'
+type DownloadSourceId = 'gitee.com' | 'github.com' | 'gh.llkk.cc' | 'wget.la'
 type AppVersionTypeId = 'prod' | 'dev'
 
 interface DownloadSource {
@@ -69,8 +69,8 @@ const baseDeviceTypes: DeviceType[] = [
 const downloadSources: DownloadSource[] = [
   { id: 'gitee.com', name: 'gitee.com', description: 'Gitee 镜像源' },
   { id: 'github.com', name: 'github.com', description: 'GitHub 官方源' },
-  { id: 'gh-proxy.net', name: 'gh-proxy.net', description: 'GitHub 镜像源' },
-  { id: 'gh-proxy.top', name: 'gh-proxy.top', description: 'GitHub 镜像源' }
+  { id: 'gh.llkk.cc', name: 'gh.llkk.cc', description: 'GitHub 镜像源' },
+  { id: 'wget.la', name: 'wget.la', description: 'GitHub 镜像源' }
 ]
 
 function isDeveloperReleaseTag(release: any): boolean {

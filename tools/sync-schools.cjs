@@ -4,8 +4,7 @@ const path = require('path');
 
 const SOURCE_URL = "https://raw.githubusercontent.com/XingHeYuZhuan/shiguang_warehouse/main/index/root_index.yaml";
 const TARGET_FILE = path.join(__dirname, '..', 'docs', 'guide', 'user', 'adapted-school.md');
-const REPO_BASE_URL = "https://github.com/XingHeYuZhuan/shiguang_warehouse";
-const REPO_SRC_URL = `${REPO_BASE_URL}/tree/main`;
+const REPO_SRC_URL = `https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources`;
 const TIMESTAMP_PLACEHOLDER = '__TIMESTAMP__';
 
 function parseYaml(yamlStr) {
@@ -39,7 +38,6 @@ function extractValue(block, key) {
 function normalizeMarkdownForCompare(markdown) {
     return markdown
         .replace(/\r\n/g, '\n')
-        .replace(/^createTime:\s*.*$/m, `createTime: ${TIMESTAMP_PLACEHOLDER}`)
         .replace(
             /^> 本页面由脚本自动同步，最后更新于：`.*`$/m,
             `> 本页面由脚本自动同步，最后更新于：\`${TIMESTAMP_PLACEHOLDER}\``
@@ -84,27 +82,27 @@ function fetchAndGenerate() {
             const now = new Date();
             const timestamp = `${now.getFullYear()}/${(now.getMonth() + 1).toString().padStart(2, '0')}/${now.getDate().toString().padStart(2, '0')} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
 
-            let md = `---\ntitle: 已适配学校\ncreateTime: ${timestamp}\n---\n\n`;
-            md += `> 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](${REPO_BASE_URL})\n`;
+            let md = `---\ntitle: 已适配学校\ncreateTime: 2026/03/04 20:21:35\n---\n\n`;
+            md += `> 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)\n`;
             md += `>\n`;
             md += `> 本页面由脚本自动同步，最后更新于：\`${timestamp}\`\n\n`;
 
-            md += `## 🛠️ 通用工具与教务\n\n> 如果你的学校不在下方列表中，可以尝试这些通用适配方案。\n\n`;
+            md += `## <Icon name="entypo:tools" /> 通用工具与教务\n\n> 如果你的学校不在下方列表中，可以尝试这些通用适配方案。\n\n`;
             general.forEach(s => {
-                const link = s.folder ? `[${s.name}](${REPO_SRC_URL}/${s.folder})` : s.name;
+                const link = s.folder ? `[${s.name}](${REPO_SRC_URL}/${s.folder}/adapters.yaml)` : s.name;
                 md += `- ${link}\n`;
             });
 
             md += `\n---\n\n`;
 
-            md += `## 🎓 具体高校列表\n\n`;
+            md += `## <Icon name="material-symbols:school" /> 具体高校列表\n\n`;
             let currentLetter = '';
             specific.forEach(s => {
                 if (s.initial !== currentLetter) {
                     currentLetter = s.initial;
                     md += `### ${currentLetter}\n`;
                 }
-                const link = s.folder ? `[${s.name}](${REPO_SRC_URL}/${s.folder})` : s.name;
+                const link = s.folder ? `[${s.name}](${REPO_SRC_URL}/${s.folder}/adapters.yaml)` : s.name;
                 md += `- ${link}\n`;
             });
 
