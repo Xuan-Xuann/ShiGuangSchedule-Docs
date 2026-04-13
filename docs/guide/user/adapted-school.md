@@ -5,7 +5,7 @@ createTime: 2026/03/04 20:21:35
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/04/09 09:12:36`
+> 本页面由脚本自动同步，最后更新于：`2026/04/13 09:28:57`
 
 ## <Icon name="entypo:tools" /> 通用工具与教务
 
@@ -24,7 +24,9 @@ createTime: 2026/03/04 20:21:35
 ### C
 - [成都航空职业技术大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CAPU/adapters.yaml)
 - [成都银杏酒店管理学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/YXHMC/adapters.yaml)
+- [重庆城市科技学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQCST/adapters.yaml)
 - [重庆大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQU/adapters.yaml)
+- [重庆电子科技职业大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQUET/adapters.yaml)
 - [重庆化工职业学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQCIVC/adapters.yaml)
 - [重庆人文科技学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQRK/adapters.yaml)
 - [长春理工大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CUST/adapters.yaml)
