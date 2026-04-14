@@ -5,7 +5,7 @@ createTime: 2026/03/04 20:21:35
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/04/13 10:30:33`
+> 本页面由脚本自动同步，最后更新于：`2026/04/14 10:24:40`
 
 ## <Icon name="entypo:tools" /> 通用工具与教务
 
@@ -106,4 +106,5 @@ createTime: 2026/03/04 20:21:35
 - [云南财经大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/YNUFE/adapters.yaml)
 ### Z
 - [中国石油大学(北京)](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CUP/adapters.yaml)
+- [中国石油大学（北京）克拉玛依校区](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CUPK/adapters.yaml)
 - [仲恺农业工程学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/ZHKU/adapters.yaml)
