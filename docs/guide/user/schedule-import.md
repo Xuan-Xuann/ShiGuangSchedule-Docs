@@ -6,13 +6,13 @@ createTime: 2026/03/04 20:22:12
 ## 课程文件导入
 > 此方式通过 `json` 文件导入，示例 `json` 课程文件：
 
-```json title="shiguangschedule_20XXXXXX_XXXXXX.json"
+```json title="shiguangschedule_XXXXXXXX_XXXXXX.json"
 {
     "courses": [
         {
             "id": "a63cb711-f626-4ff5-98dd-55cef8d815eb",
             "name": "高等数学A",
-            "teacher": "呙老师",
+            "teacher": "张老师",
             "position": "东13-D-124c",
             "day": 1,
             "startSection": 1,
@@ -23,7 +23,7 @@ createTime: 2026/03/04 20:22:12
         {
             "id": "034cb06c-ebc9-442c-a776-ef454d1811bf",
             "name": "线性代数",
-            "teacher": "曹老师",
+            "teacher": "李老师",
             "position": "东13-A-305c",
             "day": 1,
             "startSection": 2,

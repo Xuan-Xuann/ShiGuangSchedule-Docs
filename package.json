@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "ShiGuangSchedule Documentation",
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@10.33.2",
   "author": "Jursin <jursin@126.com>",
   "license": "MIT",
   "scripts": {
@@ -15,12 +15,12 @@
     "sync": "node tools/sync-schools.cjs"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.26",
+    "@vuepress/bundler-vite": "2.0.0-rc.28",
     "http-server": "^14.1.1",
-    "typescript": "^5.9.3",
-    "vue": "^3.5.30",
-    "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-plume": "1.0.0-rc.192"
+    "typescript": "^6.0.3",
+    "vue": "^3.5.33",
+    "vuepress": "2.0.0-rc.28",
+    "vuepress-theme-plume": "1.0.0-rc.198"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -29,6 +29,6 @@
     ]
   },
   "engines": {
-    "node": "^20.19.0 || >=22.0.0"
+    "node": "^22.22.2 || >=24.0.0"
   }
 }

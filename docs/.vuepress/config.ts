@@ -34,6 +34,10 @@ export default defineUserConfig({
         {
           username: 'Xuan-Xuann', // github username
           alias: ['YuXuann'], // 别名，本地 git 配置中的用户名
+        },
+        {
+          username: 'Xuan-Xuann',
+          alias: ['He Yuxuan'],
         }
       ]
     },
