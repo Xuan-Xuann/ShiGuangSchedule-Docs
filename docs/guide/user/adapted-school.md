@@ -5,7 +5,7 @@ createTime: 2026/03/04 20:21:35
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/05/05 10:34:01`
+> 本页面由脚本自动同步，最后更新于：`2026/05/06 10:38:15`
 
 ## <Icon name="entypo:tools" /> 通用工具与教务
 
@@ -26,6 +26,7 @@ createTime: 2026/03/04 20:21:35
 ### C
 - [成都航空职业技术大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CAPU/adapters.yaml)
 - [成都信息工程大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CUIT/adapters.yaml)
+- [成都医学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CMC/adapters.yaml)
 - [成都银杏酒店管理学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/YXHMC/adapters.yaml)
 - [重庆城市科技学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQCST/adapters.yaml)
 - [重庆大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQU/adapters.yaml)
@@ -89,6 +90,7 @@ createTime: 2026/03/04 20:21:35
 - [三峡大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CTGU/adapters.yaml)
 - [山东华宇工学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HUAYU/adapters.yaml)
 - [山东师范大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/SDNU/adapters.yaml)
+- [山东石油化工学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/SDIPCT/adapters.yaml)
 - [山东药品食品职业学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/SDDFVC/adapters.yaml)
 - [山西工程职业学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/SXGCXY/adapters.yaml)
 - [上海中侨职业技术大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/SHZQ/adapters.yaml)
