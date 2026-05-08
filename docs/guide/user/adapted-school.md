@@ -5,7 +5,7 @@ createTime: 2026/03/04 20:21:35
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/05/07 10:40:22`
+> 本页面由脚本自动同步，最后更新于：`2026/05/08 10:45:19`
 
 ## <Icon name="entypo:tools" /> 通用工具与教务
 
@@ -101,6 +101,7 @@ createTime: 2026/03/04 20:21:35
 - [塔里木大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/TARU/adapters.yaml)
 - [泰山学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/TSU/adapters.yaml)
 - [天津城建大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/TCU/adapters.yaml)
+- [天津农学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/TJAU/adapters.yaml)
 - [同济大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/TONGJI/adapters.yaml)
 ### W
 - [武汉船舶职业技术学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/WHCB/adapters.yaml)
@@ -118,5 +119,6 @@ createTime: 2026/03/04 20:21:35
 - [枣庄学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/UZZ/adapters.yaml)
 - [中国石油大学(北京)](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CUP/adapters.yaml)
 - [中国石油大学（北京）克拉玛依校区](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CUPK/adapters.yaml)
+- [中国石油大学(华东)](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/UPC/adapters.yaml)
 - [中南民族大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/SCUEC/adapters.yaml)
 - [仲恺农业工程学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/ZHKU/adapters.yaml)
