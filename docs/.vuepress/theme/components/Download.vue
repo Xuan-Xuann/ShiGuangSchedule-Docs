@@ -13,8 +13,8 @@ type AppVersionTypeId = 'prod' | 'dev'
 
 interface DownloadSource {
   id: DownloadSourceId
-  name: string
   description: string
+  icon?: string
 }
 
 interface AppVersionType {
@@ -33,6 +33,8 @@ const selectedDownloadSource = ref<DownloadSourceId>('gitee.com')
 const isAppVersionDropdownOpen = ref(false)
 const isDeviceDropdownOpen = ref(false)
 const isSourceDropdownOpen = ref(false)
+const copiedShaAssetId = ref<number | null>(null)
+let copiedShaTimer: number | undefined
 
 const appVersionTypes: AppVersionType[] = [
   { id: 'prod', name: '正式版', description: '普通用户使用' },
@@ -67,11 +69,15 @@ const baseDeviceTypes: DeviceType[] = [
 ]
 
 const downloadSources: DownloadSource[] = [
-  { id: 'gitee.com', name: 'gitee.com', description: 'Gitee 镜像源' },
-  { id: 'github.com', name: 'github.com', description: 'GitHub 官方源' },
-  { id: 'gh.llkk.cc', name: 'gh.llkk.cc', description: 'GitHub 镜像源' },
-  { id: 'wget.la', name: 'wget.la', description: 'GitHub 镜像源' }
+  { id: 'gitee.com', description: 'Gitee 镜像源', icon: '/icons/gitee.png' },
+  { id: 'github.com', description: 'GitHub 官方源', icon: '/icons/github-dark.png' },
+  { id: 'gh.llkk.cc', description: 'GitHub 镜像源', icon: '/icons/github-dark.png' },
+  { id: 'wget.la', description: 'GitHub 镜像源', icon: '/icons/github-dark.png' }
 ]
+
+function isGithubSource(sourceId: DownloadSourceId) {
+  return sourceId === 'github.com' || sourceId === 'gh.llkk.cc' || sourceId === 'wget.la'
+}
 
 function isDeveloperReleaseTag(release: any): boolean {
   const tag = String(release?.tag_name || '').toLowerCase()
@@ -150,6 +156,28 @@ function getDownloadUrl(asset: any): string {
   return getProxyUrl(selectedDownloadSource.value, asset)
 }
 
+function getAssetSha256(asset: any): string {
+  const digest = String(asset?.digest || '')
+  if (!digest) return '未提供'
+  return digest.replace(/^sha256:/i, '')
+}
+
+async function copyAssetSha256(asset: any) {
+  const sha256 = getAssetSha256(asset)
+  if (!sha256 || sha256 === '未提供') return
+
+  const text = `sha256:${sha256}`
+  await navigator.clipboard.writeText(text)
+
+  copiedShaAssetId.value = asset.id
+  if (copiedShaTimer) {
+    window.clearTimeout(copiedShaTimer)
+  }
+  copiedShaTimer = window.setTimeout(() => {
+    copiedShaAssetId.value = null
+  }, 2000)
+}
+
 // 根据设备类型过滤资源
 const filteredAssets = computed(() => {
   if (!currentRelease.value?.assets) return []
@@ -222,6 +250,7 @@ onMounted(() => {
         <img :src="selectedAppVersionType === 'prod' ? '/icon-prod.png' : '/icon-dev.png'"
           :alt="selectedAppVersionType === 'prod' ? '正式版' : '开发者版'" class="version-icon">
         <div class="release-title-row">
+          <Icon name="octicon:tag-16" size="1.4em" />
           <span class="release-name">{{ currentRelease.name }}</span>
           <span class="release-date">{{ new Date(currentRelease.published_at).toLocaleDateString('zh-CN') }}</span>
         </div>
@@ -294,8 +323,25 @@ onMounted(() => {
               <button class="dropdown-trigger" @click="isSourceDropdownOpen = !isSourceDropdownOpen"
                 @blur="handleSourceDropdownBlur">
                 <span class="dropdown-content">
+                  <template v-if="currentDownloadSource.icon">
+                    <img
+                      v-if="isGithubSource(currentDownloadSource.id)"
+                      src="/icons/github-dark.png"
+                      class="source-icon github-light"
+                    >
+                    <img
+                      v-if="isGithubSource(currentDownloadSource.id)"
+                      src="/icons/github-light.png"
+                      class="source-icon github-dark"
+                    >
+                    <img
+                      v-else
+                      :src="currentDownloadSource.icon"
+                      class="source-icon"
+                    >
+                  </template>
                   <span class="source-info">
-                    <span class="source-name">{{ currentDownloadSource.name }}</span>
+                    <span class="source-name">{{ currentDownloadSource.id }}</span>
                     <span class="source-desc">{{ currentDownloadSource.description }}</span>
                   </span>
                 </span>
@@ -307,8 +353,25 @@ onMounted(() => {
                 <button v-for="source in downloadSources" :key="source.id" class="dropdown-item" :class="{
                   'is-selected': selectedDownloadSource === source.id
                 }" @click="selectedDownloadSource = source.id; isSourceDropdownOpen = false">
+                  <template v-if="source.icon">
+                    <img
+                      v-if="isGithubSource(source.id)"
+                      src="/icons/github-dark.png"
+                      class="source-icon github-light"
+                    >
+                    <img
+                      v-if="isGithubSource(source.id)"
+                      src="/icons/github-light.png"
+                      class="source-icon github-dark"
+                    >
+                    <img
+                      v-else
+                      :src="source.icon"
+                      class="source-icon"
+                    >
+                  </template>
                   <span class="source-info">
-                    <span class="source-name">{{ source.name }}</span>
+                    <span class="source-name">{{ source.id }}</span>
                     <span class="source-desc">{{ source.description }}</span>
                   </span>
                 </button>
@@ -326,11 +389,19 @@ onMounted(() => {
           <div v-for="asset in filteredAssets" :key="asset.id" class="asset-item">
             <div class="asset-info">
               <div class="asset-header">
+                <Icon name="octicon:package-16" />
                 <h4 class="asset-name">{{ asset.name }}</h4>
               </div>
               <div class="asset-meta">
                 <span class="download-count">{{ asset.download_count.toLocaleString() }} 次下载</span>
                 <span class="asset-size">{{ formatFileSize(asset.size) }}</span>
+                <span class="asset-sha-wrapper">
+                  <span class="asset-sha" :title="`${getAssetSha256(asset)}`">sha256:{{ getAssetSha256(asset) }}</span>
+                  <button type="button" class="sha-copy-button" @click="copyAssetSha256(asset)">
+                    <Icon v-if="copiedShaAssetId === asset.id" name="octicon:check-16" color="#1a7f37" />
+                    <Icon v-else name="octicon:copy-16" />
+                  </button>
+                </span>
               </div>
             </div>
 
@@ -349,6 +420,12 @@ onMounted(() => {
             <h4>暂无适用于 {{ currentDeviceType.name }} 的下载文件</h4>
             <p>请尝试选择其他设备类型</p>
           </div>
+        </div>
+
+        <div class="view-release-history">
+          <a href="https://github.com/XingHeYuZhuan/shiguangschedule/releases" target="_blank" rel="noopener noreferrer">
+            查看历史版本
+          </a>
         </div>
       </div>
     </div>
@@ -466,7 +543,7 @@ onMounted(() => {
   padding: 3px 10px;
   border-radius: 20px;
   font-size: 0.875rem;
-  background: var(--vp-c-bg-soft);
+  background: #83d0da50;
   color: var(--vp-c-text-1);
 }
 
@@ -528,8 +605,23 @@ onMounted(() => {
 .dropdown-content {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
   flex: 1;
+}
+
+.source-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] img:where(.github-light, .light) {
+  display: none;
+}
+
+[data-theme="light"] img:where(.github-dark, .dark) {
+  display: none;
 }
 
 .device-info,
@@ -587,7 +679,7 @@ onMounted(() => {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
   padding: 8px 12px;
   background: none;
   border: none;
@@ -638,37 +730,83 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .asset-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
 }
 
 .asset-name {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--vp-c-text-1);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .asset-meta {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .download-count,
 .asset-size {
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--vp-c-text-2);
+  white-space: nowrap;
+}
+
+.asset-sha-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.asset-sha {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  font-family: "Monaspace Neon", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 1.05rem;
+  color: var(--vp-c-text-2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sha-copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.sha-copy-button:hover {
+  color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-default-soft);
 }
 
 .download-action {
   display: flex;
   align-items: center;
   margin-left: 20px;
+  flex-shrink: 0;
 }
 
 .download-btn {
@@ -712,6 +850,15 @@ onMounted(() => {
   color: var(--vp-c-text-1);
 }
 
+.view-release-history {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.view-release-history a:hover {
+  color: var(--vp-c-brand-1);
+}
+
 /* 响应式设计 */
 @media (max-width: 640px) {
   .download-container {
@@ -745,9 +892,18 @@ onMounted(() => {
   }
 
   .asset-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 8px;
+  }
+
+  .asset-meta {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .asset-sha-wrapper {
+    max-width: 100%;
   }
 
   .download-action {

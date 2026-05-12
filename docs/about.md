@@ -13,9 +13,14 @@ import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 
 **拾光课程表**是一款面向中国高校师生的安卓课程表应用，支持通过适配脚本导入各类教务系统课程数据，方便用户高效查看和管理个人课表。
 
-![GitHub Stars](https://img.shields.io/github/stars/XingHeYuZhuan/shiguangschedule.svg?style=flat&label=Stars)
-![GitHub Downloads](https://img.shields.io/github/downloads/XingHeYuZhuan/shiguangschedule/total?style=flat&label=Downloads)
-![License](https://img.shields.io/github/license/XingHeYuZhuan/shiguangschedule?label=License)
+![GitHub Stars](https://img.shields.io/github/stars/XingHeYuZhuan/shiguangschedule?style=flat&logo=github)
+![GitHub Watchers](https://img.shields.io/github/watchers/XingHeYuZhuan/shiguangschedule?style=flat&logo=github)
+![GitHub Downloads](https://img.shields.io/github/downloads/XingHeYuZhuan/shiguangschedule/total?style=flat&logo=github)
+![License](https://img.shields.io/github/license/XingHeYuZhuan/shiguangschedule?logo=github)
+![GitHub contributors](https://img.shields.io/github/contributors/XingHeYuZhuan/shiguangschedule?color=32A9C3&labelColor=1B3C4A&logo=contributorcovenant)
+
+<img src="https://starchart.cc/XingHeYuZhuan/shiguangschedule.svg?variant=light" alt="浅色主题" class="light">
+<img src="https://starchart.cc/XingHeYuZhuan/shiguangschedule.svg?background=%231b1b1f&axis=%23ffffff&line=%236b63ff" alt="深色主题" class="dark">
 
 ## 相关仓库
 
