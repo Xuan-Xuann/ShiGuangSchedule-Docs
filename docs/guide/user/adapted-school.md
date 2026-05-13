@@ -5,7 +5,7 @@ createTime: 2026/03/04 20:21:35
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/05/12 10:00:01`
+> 本页面由脚本自动同步，最后更新于：`2026/05/13 10:05:26`
 
 ## <Icon name="entypo:tools" /> 通用工具与教务
 
@@ -22,6 +22,7 @@ createTime: 2026/03/04 20:21:35
 ## <Icon name="material-symbols:school" /> 具体高校列表
 
 ### B
+- [北方工业大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/NCUT/adapters.yaml)
 - [北京邮电大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/BUPT/adapters.yaml)
 ### C
 - [成都航空职业技术大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CAPU/adapters.yaml)
