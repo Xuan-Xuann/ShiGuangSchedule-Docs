@@ -8,7 +8,7 @@ interface DeviceType {
   patterns: string[]
 }
 
-type DownloadSourceId = 'gitee.com' | 'github.com' | 'gh.llkk.cc' | 'wget.la'
+type DownloadSourceId = 'gitee.com' | 'github.com' | 'wget.la'
 type AppVersionTypeId = 'prod' | 'dev'
 
 interface DownloadSource {
@@ -71,12 +71,11 @@ const baseDeviceTypes: DeviceType[] = [
 const downloadSources: DownloadSource[] = [
   { id: 'gitee.com', description: 'Gitee 镜像源', icon: '/icons/gitee.png' },
   { id: 'github.com', description: 'GitHub 官方源', icon: '/icons/github-dark.png' },
-  { id: 'gh.llkk.cc', description: 'GitHub 镜像源', icon: '/icons/github-dark.png' },
   { id: 'wget.la', description: 'GitHub 镜像源', icon: '/icons/github-dark.png' }
 ]
 
 function isGithubSource(sourceId: DownloadSourceId) {
-  return sourceId === 'github.com' || sourceId === 'gh.llkk.cc' || sourceId === 'wget.la'
+  return sourceId === 'github.com' || sourceId === 'wget.la'
 }
 
 function isDeveloperReleaseTag(release: any): boolean {
