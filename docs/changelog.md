@@ -9,31 +9,37 @@ aside: false
 externalLinkIcon: false
 ---
 
+## [v1.2.3](https://github.com/XingHeYuZhuan/shiguangschedule/releases/tag/v1.2.3) <Badge type="tip" text="2026-05-20" />
+
+### ✨ 新增功能 (Features)
+- 支持将课表一键同步至系统日历
+- 支持时间段自定义别名并优化相关 UI 显示
+### 💡 功能与体验优化 (Improvements)
+- 优化课表合并块视觉表现，支持局部非本周课程视觉降级效果
+- 优化 RGB 输入框的文本输入逻辑与交互体验
+- 去除 WebView 强制加入的 X-Requested-With 请求头 ([#83](https://github.com/XingHeYuZhuan/shiguangschedule/pull/83))
+- 课表页面右上角添加快捷切换课表按钮 ([#79](https://github.com/XingHeYuZhuan/shiguangschedule/pull/79))
+
 ## [v1.2.2](https://github.com/XingHeYuZhuan/shiguangschedule/releases/tag/v1.2.2) <Badge type="tip" text="2026-04-19" />
 
-- ### ✨ 新增功能 (Features)
-
-  - 支持在课程中添加备注信息
-  - 支持自定义课表页面及课程块的文字颜色
-
-  ### 💡 功能与体验优化 (Improvements)
-
-  - 优化课表导入导出逻辑并支持备注字段迁移
-  - 优化滚动选择器的滚动选中逻辑
-  - 优化今日课表与周课表的状态显示与架构逻辑
-  - 优化深色模式状态管理逻辑
-  - 优化桌面小组件布局与课程显示逻辑
-  - 优化课程导入逻辑，实现同名课程自动分配相同颜色
-  - 新增主题设置功能并支持自定义主色调
-  - 新增启动页设置
-  - 优化课程冲突逻辑，更换非本周课程视觉提示 ([#71](https://github.com/XingHeYuZhuan/shiguangschedule/pull/71))
-  - 优化非本周课程显示
-  - 为滚动选择器添加动画效果
-
-  ### 🚀 性能与代码改进 (Improvements)
-
-  - 迁移导航框架至 Navigation 3 并重构页面路由机制
-  - 将样式设置界面的 UI 组件提取到独立文件便于维护
+### ✨ 新增功能 (Features)
+- 支持在课程中添加备注信息
+- 支持自定义课表页面及课程块的文字颜色
+### 💡 功能与体验优化 (Improvements)
+- 优化课表导入导出逻辑并支持备注字段迁移
+- 优化滚动选择器的滚动选中逻辑
+- 优化今日课表与周课表的状态显示与架构逻辑
+- 优化深色模式状态管理逻辑
+- 优化桌面小组件布局与课程显示逻辑
+- 优化课程导入逻辑，实现同名课程自动分配相同颜色
+- 新增主题设置功能并支持自定义主色调
+- 新增启动页设置
+- 优化课程冲突逻辑，更换非本周课程视觉提示 ([#71](https://github.com/XingHeYuZhuan/shiguangschedule/pull/71))
+- 优化非本周课程显示
+- 为滚动选择器添加动画效果
+### 🚀 性能与代码改进 (Improvements)
+- 迁移导航框架至 Navigation 3 并重构页面路由机制
+- 将样式设置界面的 UI 组件提取到独立文件便于维护
 
 ## [v1.2.1](https://github.com/XingHeYuZhuan/shiguangschedule/releases/tag/v1.2.1) <Badge type="tip" text="2026-03-27" />
 
@@ -116,8 +122,7 @@ externalLinkIcon: false
 ## [v1.1.10](https://github.com/XingHeYuZhuan/shiguangschedule/releases/tag/v1.1.10) <Badge type="tip" text="2025-10-20" />
 
 ::: warning 重要提示
-**教务适配数据结构重构，如果是旧版本通过安装包升级需要在`我的-更多-更新教务适配仓库`更新新的适配数据**
-**！旧版本已经不可以使用更新教务适配仓库选项了，因为更新的数据无法解析。**
+教务适配数据结构重构，如果是旧版本通过安装包升级需要在`我的-更多-更新教务适配仓库`更新新的适配数据！旧版本已经不可以使用更新教务适配仓库选项了，因为更新的数据无法解析。
 :::
 
 ### ✨ 新增功能 (Features)
