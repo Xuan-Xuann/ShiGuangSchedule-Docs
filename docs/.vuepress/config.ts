@@ -9,15 +9,18 @@ export default defineUserConfig({
   description: '拾光课程表文档站 | 大学课程表 | 安卓应用 | 开源免费',
 
   head: [
-    // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+    ['script', {
+      defer: true,
+      src: 'https://cloud.umami.is/script.js',
+      'data-website-id': 'b1d78db4-2c28-4348-b866-51e62ca28a56'
+    }]
   ],
 
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
-    /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
     hostname: 'https://sgschedule.jursin.top/',
 
     /* 文档仓库配置，用于 editLink */
