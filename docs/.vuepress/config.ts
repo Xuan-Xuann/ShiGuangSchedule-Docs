@@ -1,6 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
+import { umamiAnalyticsPlugin } from '@vuepress/plugin-umami-analytics'
 
 export default defineUserConfig({
   base: '/',
@@ -10,14 +11,15 @@ export default defineUserConfig({
 
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
-    ['script', {
-      defer: true,
-      src: 'https://cloud.umami.is/script.js',
-      'data-website-id': 'b1d78db4-2c28-4348-b866-51e62ca28a56'
-    }]
   ],
 
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        cssMinify: 'esbuild',
+      },
+    },
+  }),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
@@ -27,6 +29,12 @@ export default defineUserConfig({
     docsRepo: 'https://github.com/Jursin/ShiGuangSchedule-Docs',
     docsDir: 'docs',
     docsBranch: 'main',
+
+    plugins: {
+      seo: {
+        fallBackImage: 'https://sgschedule.jursin.top/logo.png',
+      }
+    },
 
     /* 页内信息 */
     // editLink: true,
@@ -179,4 +187,11 @@ export default defineUserConfig({
       locale: '/',    // 默认仅为主语言生成 llms 友好内容
     },
   }),
+
+  plugins: [
+    umamiAnalyticsPlugin({
+      id: 'b1d78db4-2c28-4348-b866-51e62ca28a56',
+      link: 'https://cloud.umami.is/script.js',
+    }),
+  ],
 })
