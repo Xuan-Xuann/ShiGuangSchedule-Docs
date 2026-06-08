@@ -7,7 +7,8 @@
   "author": "Jursin <jursin@126.com>",
   "license": "MIT",
   "scripts": {
-    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:build": "vuepress build docs --clean-cache --clean-temp && node tools/generate-indexnow-key.js && node tools/push-indexnow.js --push",
+    "docs:build-dev": "vuepress build docs --clean-cache --clean-temp && node tools/generate-indexnow-key.js && node tools/push-indexnow.js",
     "docs:dev": "vuepress dev docs",
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:preview": "http-server docs/.vuepress/dist",
@@ -23,6 +24,7 @@
     "@vuepress/plugin-umami-analytics": "2.0.0-rc.27",
     "@vueuse/core": "14.3.0",
     "@vueuse/integrations": "14.3.0",
+    "dotenv": "^17.4.2",
     "hash-wasm": "4.12.0",
     "http-server": "^14.1.1",
     "mark.js": "8.11.1",
