@@ -190,8 +190,8 @@ export default defineUserConfig({
 
   plugins: [
     umamiAnalyticsPlugin({
-      id: 'b1d78db4-2c28-4348-b866-51e62ca28a56',
-      link: 'https://cloud.umami.is/script.js',
+      id: 'f74fbf52-3a38-4163-99d8-ee2caf203e73',
+      link: 'https://umami.jursin.top/script.js',
     }),
   ],
 })
