@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "ShiGuangSchedule Documentation",
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@11.8.0",
   "author": "Jursin <jursin@126.com>",
   "license": "MIT",
   "scripts": {
@@ -30,9 +30,9 @@
     "mark.js": "8.11.1",
     "minisearch": "7.2.0",
     "typescript": "^6.0.3",
-    "vue": "^3.5.35",
+    "vue": "^3.5.38",
     "vuepress": "2.0.0-rc.30",
-    "vuepress-theme-plume": "1.0.0-rc.202"
+    "vuepress-theme-plume": "1.0.0-rc.203"
   },
   "engines": {
     "node": "^22.22.2 || >=24.0.0"

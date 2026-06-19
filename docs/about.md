@@ -19,8 +19,8 @@ import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 ![License](https://img.shields.io/github/license/XingHeYuZhuan/shiguangschedule?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/XingHeYuZhuan/shiguangschedule?color=32A9C3&labelColor=1B3C4A&logo=contributorcovenant)
 
-<img src="https://starchart.cc/XingHeYuZhuan/shiguangschedule.svg?variant=light" alt="浅色主题" class="light">
-<img src="https://starchart.cc/XingHeYuZhuan/shiguangschedule.svg?background=%231b1b1f&axis=%23ffffff&line=%236b63ff" alt="深色主题" class="dark">
+<img src="https://starcharts.jursin.top/XingHeYuZhuan/shiguangschedule.svg?variant=light" alt="浅色主题" class="light">
+<img src="https://starcharts.jursin.top/XingHeYuZhuan/shiguangschedule.svg?background=%231b1b1f&axis=%23ffffff&line=%236b63ff" alt="深色主题" class="dark">
 
 ## 相关仓库
 
