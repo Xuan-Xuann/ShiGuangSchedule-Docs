@@ -5,7 +5,7 @@ createTime: 2026/03/04 20:21:35
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/10/03 10:49:13`
+> 本页面由脚本自动同步，最后更新于：`2026/10/04 11:19:14`
 
 ## <Icon name="entypo:tools" /> 通用工具与教务
 
@@ -42,7 +42,7 @@ createTime: 2026/03/04 20:21:35
 - [重庆城市科技学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQCST/adapters.yaml)
 - [重庆大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQU/adapters.yaml)
 - [重庆电子科技职业大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQUET/adapters.yaml)
-- [重庆工程���院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQIE/adapters.yaml)
+- [重庆工程学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQIE/adapters.yaml)
 - [重庆工商职业学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQTBI/adapters.yaml)
 - [重庆航天职业技术学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQEPC/adapters.yaml)
 - [重庆化工职业学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/CQCIVC/adapters.yaml)
@@ -255,6 +255,7 @@ createTime: 2026/03/04 20:21:35
 - [云南财经大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/YNUFE/adapters.yaml)
 ### Z
 - [枣庄��院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/UZZ/adapters.yaml)
+- [浙江工商职业技术学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/ZJBTI/adapters.yaml)
 - [浙江工业大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/ZJUT/adapters.yaml)
 - [浙江树人学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/ZJSRU/adapters.yaml)
 - [浙江中医药大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/ZCMU/adapters.yaml)
