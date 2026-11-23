@@ -5,7 +5,7 @@ createTime: 2026/03/04 20:21:35
 
 > 适配脚本仓库：[XingHeYuZhuan/shiguang_warehouse](https://github.com/XingHeYuZhuan/shiguang_warehouse)
 >
-> 本页面由脚本自动同步，最后更新于：`2026/11/22 11:57:22`
+> 本页面由脚本自动同步，最后更新于：`2026/11/23 12:39:16`
 
 ## <Icon name="entypo:tools" /> 通用工具与教务
 
@@ -63,6 +63,7 @@ createTime: 2026/03/04 20:21:35
 - [大连理工大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/DLUT/adapters.yaml)
 - [大连民族大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/DLNU/adapters.yaml)
 - [德州学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/DZU/adapters.yaml)
+- [滇西科技师范学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/WYNU/adapters.yaml)
 - [电子科技大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/UESTC/adapters.yaml)
 - [东北大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/NEU/adapters.yaml)
 - [东北大学秦皇岛分校](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/NEUQ/adapters.yaml)
@@ -110,6 +111,7 @@ createTime: 2026/03/04 20:21:35
 - [合肥师范学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HFNU/adapters.yaml)
 - [河北地质大学华信学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HBGUHX/adapters.yaml)
 - [河北东方学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HBDFXY/adapters.yaml)
+- [河北工程大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HEBEU/adapters.yaml)
 - [河北经贸大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HUEB/adapters.yaml)
 - [河北农业大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HEBAU/adapters.yaml)
 - [河南财经政法大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HUEL/adapters.yaml)
@@ -151,7 +153,6 @@ createTime: 2026/03/04 20:21:35
 - [怀化职业技术学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HHVTC/adapters.yaml)
 - [淮北理工学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HBLGXY/adapters.yaml)
 - [淮南师范学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HNNU/adapters.yaml)
-- [���北工程大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/HEBEU/adapters.yaml)
 ### J
 - [吉利学院](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/GUC/adapters.yaml)
 - [吉林大学](https://github.com/XingHeYuZhuan/shiguang_warehouse/tree/main/resources/JLU/adapters.yaml)
